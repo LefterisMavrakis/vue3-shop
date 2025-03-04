@@ -162,6 +162,14 @@
     }
   ],
   "cart": [
-    { "id": 1, "name": "Laptop", "price": 1200, "description": "Lorem ipsum", "image": null }
+    {
+      "id": 1,
+      "productId": 1,
+      "name": "Laptop",
+      "price": 1200,
+      "description": "Lorem ipsum",
+      "image": null,
+      "quantity": 1
+    }
   ]
 }
