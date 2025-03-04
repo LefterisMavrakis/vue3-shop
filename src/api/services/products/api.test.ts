@@ -16,7 +16,7 @@ describe('productsAPI', () => {
       expect(apiClient.get).toHaveBeenCalledWith('/products', {
         params: {
           _page: 1,
-          _per_page: 10,
+          _per_page: 8,
         },
       })
     })

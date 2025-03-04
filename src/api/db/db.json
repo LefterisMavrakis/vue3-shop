@@ -79,6 +79,86 @@
       "description": "Lorem ipsum",
       "image": null,
       "category": "electronics"
+    },
+    {
+      "id": 11,
+      "name": "Hoody",
+      "price": 1200,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
+    },
+    {
+      "id": 12,
+      "name": "Hoody 2",
+      "price": 800,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
+    },
+    {
+      "id": 13,
+      "name": "Hoody 3",
+      "price": 600,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
+    },
+    {
+      "id": 14,
+      "name": "Hoody 4",
+      "price": 200,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
+    },
+    {
+      "id": 15,
+      "name": "Hoody 5",
+      "price": 150,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
+    },
+    {
+      "id": 16,
+      "name": "Hoody 6",
+      "price": 100,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
+    },
+    {
+      "id": 17,
+      "name": "Hoody 7",
+      "price": 50,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
+    },
+    {
+      "id": 18,
+      "name": "Hoody 8",
+      "price": 300,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
+    },
+    {
+      "id": 19,
+      "name": "Hoody 9",
+      "price": 250,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
+    },
+    {
+      "id": 20,
+      "name": "Hoody 10",
+      "price": 80,
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing"
     }
   ],
   "cart": [

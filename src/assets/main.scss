@@ -1,0 +1,129 @@
+@import './base.css';
+
+#app {
+  min-height: 100vh;
+  display: flex;
+}
+
+body {
+  width: 100%;
+  max-width: 2000px;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  margin: 0 auto;
+  background-color: var(--dark-blue);
+  font-weight: 14px;
+}
+
+.mainField {
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #fff;
+
+  input {
+    border: none;
+    box-shadow: none;
+    min-height: 40px;
+    padding: 5px 10px;
+    background-color: transparent;
+    width: 100%;
+    font-size: 18px;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.fieldIcon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.mainBorder {
+  border-radius: 16px;
+}
+
+.textTitle {
+  font-size: 1em;
+  font-weight: 600;
+
+  &.md {
+    font-size: 1.3em;
+  }
+
+  &.xl {
+    font-size: 1.5em;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.gap-1 {
+    gap: 4px;
+  }
+
+  &.gap-2 {
+    gap: 8px;
+  }
+
+  &.gap-3 {
+    gap: 12px;
+  }
+
+  &.gap-4 {
+    gap: 16px;
+  }
+
+  &.gap-5 {
+    gap: 20px;
+  }
+
+  &.gap-6 {
+    gap: 30px;
+  }
+
+  &.noWrap {
+    flex-wrap: nowrap;
+  }
+
+  &.justify-center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.mainButton {
+  min-height: 34px;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.2em;
+  background-color: var(--dark-blue);
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  box-sizing: border-box;
+
+  &.small {
+    max-width: 200px;
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
+  }
+}

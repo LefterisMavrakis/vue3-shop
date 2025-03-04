@@ -7,13 +7,25 @@ import type {
 import productsAPI from '@/api/services/products/api'
 
 const useProductsStore = defineStore('products', () => {
-  const products = ref<GetProductsApiResponse>([])
+  const productsData = ref<GetProductsApiResponse['data']>([])
   const productsLoading = ref(true)
+  const productsNextPage = ref<number | null>(null)
 
-  const fetchProducts = async (params: GetProductsRequestParams) => {
+  const fetchProducts = async (
+    params: Omit<GetProductsRequestParams, 'per_page'>,
+    appendMode?: boolean,
+  ) => {
     try {
       const productsResponse = await productsAPI.getProducts(params)
-      products.value = productsResponse
+
+      productsNextPage.value = productsResponse.next
+
+      if (!appendMode) {
+        productsData.value = productsResponse.data
+        return
+      }
+
+      productsData.value = [...productsData.value, ...productsResponse.data]
     } catch (err) {
       console.log(err)
     } finally {
@@ -22,9 +34,10 @@ const useProductsStore = defineStore('products', () => {
   }
 
   return {
-    products,
+    productsData,
     productsLoading,
     fetchProducts,
+    productsNextPage,
   }
 })
 

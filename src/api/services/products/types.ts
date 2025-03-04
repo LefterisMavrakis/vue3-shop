@@ -4,9 +4,13 @@ export type ApiProduct = {
   price: number
   description: string
   image: string | null
+  category: string
 }
 
-export type GetProductsApiResponse = ApiProduct[]
+export type GetProductsApiResponse = {
+  data: ApiProduct[]
+  next: number | null
+}
 
 export type GetProductsRequestParams = {
   page?: number

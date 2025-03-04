@@ -7,7 +7,7 @@ const productsAPI = {
       .get(`/products`, {
         params: {
           _page: params.page,
-          _per_page: params.per_page,
+          _per_page: 8,
         },
       })
       .then(({ data }: { data: GetProductsApiResponse }) => {

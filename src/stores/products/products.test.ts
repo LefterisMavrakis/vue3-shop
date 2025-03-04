@@ -14,7 +14,9 @@ describe('useProductsStore', () => {
   let store: ReturnType<typeof useProductsStore>
 
   beforeEach(() => {
-    vi.spyOn(productsAPI, 'getProducts').mockResolvedValue(mockedProductsList)
+    vi.spyOn(productsAPI, 'getProducts').mockResolvedValue({
+      data: mockedProductsList,
+    })
 
     setActivePinia(createPinia())
     store = useProductsStore()
@@ -34,7 +36,7 @@ describe('useProductsStore', () => {
       per_page: 10,
     })
 
-    expect(store.products).toEqual(mockedProductsList)
+    expect(store.productsData).toEqual(mockedProductsList)
     expect(store.productsLoading).toBe(false)
   })
 
@@ -45,6 +47,6 @@ describe('useProductsStore', () => {
     await store.fetchProducts({ page: 1, per_page: 10 })
 
     expect(store.productsLoading).toBe(false)
-    expect(store.products).toEqual([])
+    expect(store.productsData).toEqual([])
   })
 })
