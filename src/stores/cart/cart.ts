@@ -1,17 +1,19 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import type { GetCartApiResponse } from '@/api/services/cart/types'
+import type { ApiCartItem, GetCartApiResponse } from '@/api/services/cart/types'
 import cartAPI from '@/api/services/cart/api'
 
-const useCartStore = defineStore('products', () => {
-  const cartData = ref<GetCartApiResponse['data']>([])
+const useCartStore = defineStore('cart', () => {
+  const cartData = ref<GetCartApiResponse>([])
   const cartLoading = ref(true)
+  const addToCartLoading = ref(false)
+  const deleteFromCartLoading = ref(false)
 
   const fetchCartProducts = async () => {
     try {
       const cartResponse = await cartAPI.getCartProducts()
 
-      cartData.value = cartResponse.data
+      cartData.value = cartResponse
     } catch (err) {
       console.log(err)
     } finally {
@@ -19,10 +21,57 @@ const useCartStore = defineStore('products', () => {
     }
   }
 
+  const addProductToCart = async (product: Omit<ApiCartItem, 'id' | 'quantity'>) => {
+    addToCartLoading.value = true
+
+    try {
+      const cartItem = cartData.value?.find((item) => item.productId === product.productId)
+
+      if (!cartItem) {
+        await cartAPI.addProduct({ ...product, quantity: 1 })
+        await fetchCartProducts()
+        return
+      }
+
+      await cartAPI.updateProductQuantity(cartItem.id, cartItem.quantity + 1)
+      await fetchCartProducts()
+    } catch (err) {
+      console.log(err)
+    } finally {
+      addToCartLoading.value = false
+    }
+  }
+
+  const deleteProductFromCart = async (cartItemId: string, force?: boolean) => {
+    deleteFromCartLoading.value = true
+
+    try {
+      const cartItem = cartData.value?.find((item) => item.id === cartItemId)
+
+      if (cartItem && cartItem.quantity > 1 && !force) {
+        await cartAPI.updateProductQuantity(cartItem.id, cartItem.quantity - 1)
+        await fetchCartProducts()
+        return
+      }
+
+      await cartAPI.deleteProduct(cartItemId)
+
+      await fetchCartProducts()
+    } catch (err) {
+      console.log(err)
+    } finally {
+      deleteFromCartLoading.value = false
+    }
+  }
+
   return {
     cartData,
     cartLoading,
     fetchCartProducts,
+    addProductToCart,
+    addToCartLoading,
+    deleteProductFromCart,
+    deleteFromCartLoading,
   }
 })
 

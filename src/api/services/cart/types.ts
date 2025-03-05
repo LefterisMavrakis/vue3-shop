@@ -9,6 +9,4 @@ export type ApiCartItem = {
   quantity: number
 }
 
-export type GetCartApiResponse = {
-  data: ApiCartItem[]
-}
+export type GetCartApiResponse = ApiCartItem[]

@@ -19,7 +19,7 @@ import { RouterView } from 'vue-router'
 import AppHeader from '@/components/header/AppHeader.vue'
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .mainLayoutWrapper {
   display: flex;
   flex-direction: column;
@@ -37,5 +37,9 @@ import AppHeader from '@/components/header/AppHeader.vue'
 .mainInner {
   padding: 20px;
   box-sizing: border-box;
+
+  @media (max-width: 640px) {
+    padding: 20px 10px;
+  }
 }
 </style>

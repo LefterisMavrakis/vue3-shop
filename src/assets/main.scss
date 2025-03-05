@@ -1,18 +1,18 @@
 @import './base.css';
-
-#app {
-  min-height: 100vh;
-  display: flex;
-}
-
 body {
   width: 100%;
+  line-height: 1.2;
   max-width: 2000px;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
   margin: 0 auto;
   background-color: var(--dark-blue);
   font-weight: 14px;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
 }
 
 .mainField {
@@ -104,6 +104,11 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  &.justify-between {
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .mainButton {
@@ -116,6 +121,7 @@ body {
   text-align: center;
   padding: 10px 15px;
   box-sizing: border-box;
+  cursor: pointer;
 
   &.small {
     max-width: 200px;
@@ -126,4 +132,13 @@ body {
     border: 1px solid var(--dark-blue);
     color: var(--dark-blue);
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }

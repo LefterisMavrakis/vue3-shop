@@ -4,7 +4,7 @@
       <div class="textTitle xl">Products List</div>
 
       <TextField
-        v-model="searchText"
+        v-model="filtersStore.searchText"
         clearale
         :debounce="500"
         placeholder="Search product by name or category"
@@ -14,7 +14,7 @@
     <div class="productListBottomSection flex column gap-5 justify-center">
       <template v-if="productsLoading"> Loading... </template>
       <template v-else>
-        <div class="productsListContainer flex gap-3">
+        <div class="productsListContainer">
           <ProductItem v-for="product in filteredProducts" :key="product.id" v-bind="product" />
         </div>
 
@@ -33,7 +33,6 @@ import useFiltersStore from '@/stores/filters/filters'
 import TextField from '../shared/textField/TextField.vue'
 import ProductItem from '../productItem/ProductItem.vue'
 
-const searchText = ref('')
 const loadMoreRef = ref(null)
 const productsStore = useProductsStore()
 
@@ -45,7 +44,7 @@ const filtersStore = useFiltersStore()
 const currentPage = computed(() => filtersStore.currentPage)
 
 const filteredProducts = computed(() => {
-  const query = searchText.value.toLowerCase()
+  const query = filtersStore.searchText.toLowerCase()
 
   return products.value.filter(
     (item) =>
@@ -84,12 +83,31 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .productListTopSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+
+.productsListContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 20px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+
+  @media (max-width: 880px) {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+  }
 }
 
 .loadMoreBtn {

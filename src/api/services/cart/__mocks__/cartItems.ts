@@ -9,4 +9,14 @@ export const mockedCartItems = [
     image: null,
     quantity: 1,
   },
+  {
+    id: 'test2',
+    productId: 1,
+    name: 'Iphone',
+    price: 3000,
+    description: 'Lorem ipsum',
+    category: 'electronics',
+    image: null,
+    quantity: 2,
+  },
 ]

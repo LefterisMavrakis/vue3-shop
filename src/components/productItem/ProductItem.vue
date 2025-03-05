@@ -20,7 +20,14 @@
         {{ formattedPrice }}
       </div>
 
-      <button class="mainButton">Add to cart</button>
+      <div
+        class="mainButton addToCart"
+        v-ripple
+        :disable="cartStore.addToCartLoading"
+        @click="handleAddToCart()"
+      >
+        Add to cart
+      </div>
     </div>
   </div>
 </template>
@@ -28,23 +35,35 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { ApiProduct } from '@/api/services/products/types'
+import useCartStore from '@/stores/cart/cart'
+import { convertToEuroPrice } from '@/utils/utils'
+import vRipple from '@/directives/v-ripple/ripple'
 
 type Props = ApiProduct
 
 const props = defineProps<Props>()
+const cartStore = useCartStore()
+
+const handleAddToCart = async () => {
+  await cartStore.addProductToCart({
+    productId: props.id,
+    name: props.name,
+    description: props.description,
+    image: props.image,
+    category: props.category,
+    price: props.price,
+  })
+}
 
 const formattedPrice = computed(() => {
-  return new Intl.NumberFormat('de-DE', {
-    style: 'currency',
-    currency: 'EUR',
-  }).format(Number(props.price))
+  return convertToEuroPrice(props.price)
 })
 </script>
 
 <style lang="scss" scoped>
 .productItem {
-  min-width: 200px;
-  flex: 1 1 calc(25% - 12px);
+  // min-width: 200px;
+  // flex: 1 1 calc(25% - 12px);
   background-color: #fcfbff;
   border-radius: 16px;
   box-sizing: border-box;
