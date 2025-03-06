@@ -2,7 +2,7 @@ import type { GetProductsApiResponse } from '../types'
 
 export const mockedProductsList: GetProductsApiResponse['data'] = [
   {
-    id: 1,
+    id: '1',
     name: 'Laptop',
     price: 1200,
     description: 'Lorem ipsum',
@@ -10,7 +10,7 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     category: 'electronics',
   },
   {
-    id: 2,
+    id: '2',
     name: 'Smartphone',
     price: 800,
     description: 'Lorem ipsum',
@@ -18,7 +18,7 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     category: 'electronics',
   },
   {
-    id: 3,
+    id: '3',
     name: 'Tablet',
     price: 600,
     description: 'Lorem ipsum',
@@ -26,7 +26,7 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     category: 'electronics',
   },
   {
-    id: 4,
+    id: '4',
     name: 'Smartwatch',
     price: 200,
     description: 'Lorem ipsum',
@@ -34,7 +34,7 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     category: 'electronics',
   },
   {
-    id: 5,
+    id: '5',
     name: 'Headphones',
     price: 150,
     description: 'Lorem ipsum',
@@ -42,7 +42,7 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     category: 'electronics',
   },
   {
-    id: 6,
+    id: '6',
     name: 'Keyboard',
     price: 100,
     description: 'Lorem ipsum',
@@ -50,7 +50,7 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     category: 'electronics',
   },
   {
-    id: 7,
+    id: '7',
     name: 'Mouse',
     price: 50,
     description: 'Lorem ipsum',
@@ -58,7 +58,7 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     category: 'electronics',
   },
   {
-    id: 8,
+    id: '8',
     name: 'Monitor',
     price: 300,
     description: 'Lorem ipsum',
@@ -66,7 +66,7 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     category: 'electronics',
   },
   {
-    id: 9,
+    id: '9',
     name: 'Printer',
     price: 250,
     description: 'Lorem ipsum',
@@ -74,7 +74,7 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     category: 'electronics',
   },
   {
-    id: 10,
+    id: '10',
     name: 'Webcam',
     price: 80,
     description: 'Lorem ipsum',

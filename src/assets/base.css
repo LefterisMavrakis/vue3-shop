@@ -29,7 +29,7 @@
   --border-radius-4: 16px;
   --border-radius-5: 20px;
   --border-radius-6: 24px;
-  --border-v-circle: 50%;
+  --border-radius-circle: 50%;
   --muted-bg: rgba(0, 0, 0, 0.04);
   --z-index-max: 2000;
 }

@@ -6,10 +6,14 @@ import useProductsStore from '@/stores/products/products'
 import productsAPI from '@/api/services/products/api'
 import { mockedProductsList } from '@/api/services/products/__mocks__/products'
 import TextField from '../shared/textField/TextField.vue'
+import useFiltersStore from '@/stores/filters/filters'
 
 vi.mock('vue-router', () => ({
   useRoute: vi.fn(() => ({
     query: { page: '1' },
+  })),
+  useRouter: vi.fn(() => ({
+    replace: vi.fn(),
   })),
 }))
 
@@ -21,6 +25,7 @@ vi.spyOn(productsAPI, 'getProducts').mockResolvedValue({
 describe('ProductsList', () => {
   let wrapper: VueWrapper
   let productsStore: ReturnType<typeof useProductsStore>
+  let filtersStore: ReturnType<typeof useFiltersStore>
 
   beforeEach(async () => {
     global.IntersectionObserver = vi.fn().mockImplementation((callback) => {
@@ -39,17 +44,25 @@ describe('ProductsList', () => {
     })
 
     productsStore = useProductsStore()
+    filtersStore = useFiltersStore()
 
     await productsStore.$patch({
       productsLoading: false,
       productsNextPage: 2,
       productsData: mockedProductsList,
     })
+
+    await filtersStore.$patch({
+      sortBy: [
+        { label: 'Name', value: 'name' },
+        { label: 'Price', value: 'price' },
+      ],
+    })
   })
 
   describe('when mounted', () => {
-    it('calls fetchProducts', async () => {
-      expect(productsStore.fetchProducts).toHaveBeenCalledWith({ page: 1 })
+    it('calls fetchProducts with the correct params', async () => {
+      expect(productsStore.fetchProducts).toHaveBeenCalledWith({ page: 1, sort: 'name' })
     })
 
     it('renders a list of products', () => {

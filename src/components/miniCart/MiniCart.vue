@@ -9,7 +9,7 @@
     </div>
     <transition name="fade">
       <div v-show="isCartVisible" class="miniCartContent">
-        <div class="topSection flex justify-between">
+        <div class="topSection flex noWrap justify-between">
           <h4 class="textTitle cartTitle">You have {{ cartItemsCount }} items to your cart</h4>
 
           <div class="closeMiniCart" @click="toggleCart">

@@ -1,7 +1,7 @@
 <template>
   <div class="productItemMini">
     <div class="productImage">
-      <img width="auto" height="80px" :src="imagePlaceholder" />
+      <img width="auto" height="80px" :src="props.image ?? imagePlaceholder" />
     </div>
 
     <div class="flex column">

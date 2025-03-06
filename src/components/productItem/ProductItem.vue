@@ -2,7 +2,7 @@
   <div class="productItem">
     <div class="productTopSection flex column gap-1 justify-center">
       <div class="productImage">
-        <img :src="imagePlaceholder" />
+        <img :src="props.image ?? imagePlaceholder" />
       </div>
     </div>
 
@@ -20,7 +20,7 @@
       </div>
 
       <div
-        class="mainButton addToCart"
+        class="mainButton outlined addToCart"
         v-ripple
         :disable="cartStore.addToCartLoading"
         @click="handleAddToCart()"
@@ -67,9 +67,9 @@ const formattedPrice = computed(() => {
   box-sizing: border-box;
 
   .productTopSection {
-    padding: 20px 10px;
+    padding: 40px 10px;
     box-sizing: border-box;
-    height: 230px;
+    height: 300px;
     position: relative;
 
     &::after {

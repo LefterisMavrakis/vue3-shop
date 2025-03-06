@@ -1,5 +1,5 @@
 export type ApiProduct = {
-  id: number
+  id: string
   name: string
   price: number
   description: string
@@ -15,4 +15,5 @@ export type GetProductsApiResponse = {
 export type GetProductsRequestParams = {
   page?: number
   per_page?: number
+  sort?: string
 }

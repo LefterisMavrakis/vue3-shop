@@ -6,7 +6,7 @@ import type { ApiProduct } from '@/api/services/products/types'
 import useCartStore from '@/stores/cart/cart'
 
 const mockProduct: ApiProduct = {
-  id: 1,
+  id: '1',
   name: 'Test Product',
   description: 'This is a test product.',
   category: 'test category',
@@ -60,7 +60,7 @@ describe('ProductItem', () => {
       image: null,
       name: 'Test Product',
       price: 200,
-      productId: 1,
+      productId: '1',
     })
   })
 })

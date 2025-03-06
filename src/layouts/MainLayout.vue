@@ -39,7 +39,7 @@ header {
 }
 
 .mainInner {
-  padding: 20px;
+  padding: 20px 20px 100px;
   box-sizing: border-box;
 
   @media (max-width: 640px) {

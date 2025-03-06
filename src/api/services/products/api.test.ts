@@ -17,6 +17,7 @@ describe('productsAPI', () => {
         params: {
           _page: 1,
           _per_page: 8,
+          _order: 'asc',
         },
       })
     })

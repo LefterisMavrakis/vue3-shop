@@ -1,6 +1,6 @@
 export type ApiCartItem = {
   id: string
-  productId: number
+  productId: string
   name: string
   price: number
   description: string

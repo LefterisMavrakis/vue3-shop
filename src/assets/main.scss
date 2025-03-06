@@ -22,8 +22,8 @@ body {
 .mainField {
   width: 100%;
   max-width: 400px;
-  border: 1px solid #b1afaf;
-  border-radius: var(--border-radius-1);
+  border: 1px solid var(--vt-c-divider-light-1);
+  border-radius: var(--border-radius-2);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -43,6 +43,10 @@ body {
       border: none;
       outline: none;
     }
+  }
+
+  select {
+    min-height: 50px;
   }
 }
 
@@ -116,11 +120,14 @@ body {
     align-items: center;
   }
 }
+.fullWidth {
+  width: 100%;
+}
 
 .mainButton {
   min-height: 34px;
   border: none;
-  border-radius: var(--border-radius-4);
+  border-radius: var(--border-radius-6);
   font-size: 1.2em;
   background-color: var(--dark-blue);
   color: white;
@@ -137,6 +144,12 @@ body {
     background-color: transparent;
     border: 1px solid var(--dark-blue);
     color: var(--dark-blue);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--dark-blue);
+      color: #fff;
+    }
   }
 }
 
