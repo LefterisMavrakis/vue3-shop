@@ -200,6 +200,46 @@
       "image": null,
       "category": "electronics",
       "price": 800,
+      "quantity": 2
+    },
+    {
+      "id": "4233",
+      "productId": "3",
+      "name": "Tablet",
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "electronics",
+      "price": 600,
+      "quantity": 13
+    },
+    {
+      "id": "cfae",
+      "productId": "4",
+      "name": "Smartwatch",
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "electronics",
+      "price": 200,
+      "quantity": 3
+    },
+    {
+      "id": "56f8",
+      "productId": "10",
+      "name": "Webcam",
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "electronics",
+      "price": 80,
+      "quantity": 2
+    },
+    {
+      "id": "c3cb",
+      "productId": "11",
+      "name": "Hoody",
+      "description": "Lorem ipsum",
+      "image": null,
+      "category": "clothing",
+      "price": 1200,
       "quantity": 1
     }
   ]

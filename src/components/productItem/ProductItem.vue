@@ -63,13 +63,12 @@ const formattedPrice = computed(() => {
 <style lang="scss" scoped>
 .productItem {
   background-color: #fff;
-  border-radius: 16px;
+  border-radius: var(--border-radius-4);
   box-sizing: border-box;
 
   .productTopSection {
     padding: 20px 10px;
     box-sizing: border-box;
-    margin: 0 0 10px;
     height: 230px;
     position: relative;
 
@@ -77,11 +76,10 @@ const formattedPrice = computed(() => {
       content: '';
       position: absolute;
       top: 0;
-      opacity: 0.03;
       width: 100%;
       height: 100%;
-      border-radius: var(--border-radius-2);
-      background-color: #000;
+      border-radius: var(--border-radius-4);
+      background-color: var(--muted-bg);
       pointer-events: none;
     }
 

@@ -76,7 +76,7 @@ onMounted(async () => {
     font-size: 13px;
     padding: 10px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: var(--border-radius-3);
     transition: all 0.3s ease;
     box-sizing: border-box;
     display: flex;
@@ -96,7 +96,7 @@ onMounted(async () => {
     .cartItemsCount {
       color: var(--vt-c-black-soft);
       font-weight: 600;
-      border-radius: 14px;
+      border-radius: var(--border-radius-4);
       position: relative;
       background-color: rgb(241, 193, 102);
       padding: 5px 10px;
@@ -108,7 +108,7 @@ onMounted(async () => {
     right: 0;
     width: 400px;
     background-color: #fff;
-    border-radius: 14px;
+    border-radius: var(--border-radius-4);
     box-shadow: -1px 8px 20px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
@@ -136,6 +136,7 @@ onMounted(async () => {
       padding: 20px;
       background-color: #fff;
       border-bottom: 1px solid #e9e7e7;
+      z-index: 10;
     }
 
     .productsSection {

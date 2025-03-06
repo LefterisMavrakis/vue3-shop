@@ -83,9 +83,7 @@ const handleMinusClick = async () => {
   align-items: center;
   flex-wrap: wrap;
   gap: 14px;
-  border-radius: 8px;
   padding: 5px 10px;
-  border: 1px solid var(--muted);
 }
 
 .productQuantityActions {
@@ -105,7 +103,7 @@ const handleMinusClick = async () => {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: var(--border-1);
   padding: 0;
 
   svg {
