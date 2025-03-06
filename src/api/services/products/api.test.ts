@@ -11,13 +11,15 @@ describe('productsAPI', () => {
       await productsAPI.getProducts({
         page: 1,
         per_page: 10,
+        sort: 'name,price',
       });
 
       expect(apiClient.get).toHaveBeenCalledWith('/products', {
         params: {
           _page: 1,
           _per_page: 8,
-          _order: 'asc',
+          _order: 'asc,asc',
+          _sort: 'name,price',
         },
       });
     });
