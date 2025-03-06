@@ -1,5 +1,5 @@
-import type { GetProductsRequestParams, GetProductsApiResponse } from './types'
-import apiClient from '@/api/client/client'
+import type { GetProductsRequestParams, GetProductsApiResponse } from './types';
+import apiClient from '@/api/client/client';
 
 const productsAPI = {
   getProducts: async (params: GetProductsRequestParams) => {
@@ -16,9 +16,9 @@ const productsAPI = {
         },
       })
       .then(({ data }: { data: GetProductsApiResponse }) => {
-        return data
-      })
+        return data;
+      });
   },
-}
+};
 
-export default productsAPI
+export default productsAPI;

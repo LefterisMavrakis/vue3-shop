@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import MiniCart from '../miniCart/MiniCart.vue'
+import MiniCart from '../miniCart/MiniCart.vue';
 </script>
 
 <style scoped>

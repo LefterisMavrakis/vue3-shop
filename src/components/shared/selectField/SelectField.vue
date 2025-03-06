@@ -25,42 +25,42 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits, ref } from 'vue'
+import { defineProps, defineEmits, ref } from 'vue';
 
 type Props = {
-  modelValue: Option[]
-  options: Option[]
-  multiselect?: boolean
-}
+  modelValue: Option[];
+  options: Option[];
+  multiselect?: boolean;
+};
 
 type Option = {
-  label: string
-  value: string
-}
+  label: string;
+  value: string;
+};
 
-const props = defineProps<Props>()
+const props = defineProps<Props>();
 
-const emit = defineEmits(['update:modelValue'])
-const selected = ref<Option | null>()
+const emit = defineEmits(['update:modelValue']);
+const selected = ref<Option | null>();
 
 const addItem = () => {
   if (selected.value && !props.modelValue.some((item) => item.value === selected.value?.value)) {
     if (props.multiselect) {
-      emit('update:modelValue', [...props.modelValue, selected.value])
+      emit('update:modelValue', [...props.modelValue, selected.value]);
     } else {
-      emit('update:modelValue', [selected.value])
+      emit('update:modelValue', [selected.value]);
     }
   }
 
-  selected.value = null
-}
+  selected.value = null;
+};
 
 const removeItem = (item: Option) => {
   emit(
     'update:modelValue',
     props.modelValue.filter((i) => i.value !== item.value),
-  )
-}
+  );
+};
 </script>
 
 <style scoped lang="scss">

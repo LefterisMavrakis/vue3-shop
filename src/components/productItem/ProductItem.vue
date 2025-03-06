@@ -32,17 +32,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import type { ApiProduct } from '@/api/services/products/types'
-import useCartStore from '@/stores/cart/cart'
-import { convertToEuroPrice } from '@/utils/utils'
-import vRipple from '@/directives/v-ripple/ripple'
-import imagePlaceholder from '@/assets/png/iphone16.png'
+import { computed } from 'vue';
+import type { ApiProduct } from '@/api/services/products/types';
+import useCartStore from '@/stores/cart/cart';
+import { convertToEuroPrice } from '@/utils/utils';
+import vRipple from '@/directives/v-ripple/ripple';
+import imagePlaceholder from '@/assets/png/iphone16.png';
 
-type Props = ApiProduct
+type Props = ApiProduct;
 
-const props = defineProps<Props>()
-const cartStore = useCartStore()
+const props = defineProps<Props>();
+const cartStore = useCartStore();
 
 const handleAddToCart = async () => {
   await cartStore.addProductToCart({
@@ -52,12 +52,12 @@ const handleAddToCart = async () => {
     image: props.image,
     category: props.category,
     price: props.price,
-  })
-}
+  });
+};
 
 const formattedPrice = computed(() => {
-  return convertToEuroPrice(props.price)
-})
+  return convertToEuroPrice(props.price);
+});
 </script>
 
 <style lang="scss" scoped>

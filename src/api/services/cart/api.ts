@@ -1,36 +1,36 @@
-import type { GetCartApiResponse, ApiCartItem } from './types'
-import apiClient from '@/api/client/client'
+import type { GetCartApiResponse, ApiCartItem } from './types';
+import apiClient from '@/api/client/client';
 
 const cartAPI = {
   getCartProducts: async () => {
     return apiClient.get(`/cart`).then(({ data }: { data: GetCartApiResponse }) => {
-      return data
-    })
+      return data;
+    });
   },
   addProduct: async (productToAdd: Omit<ApiCartItem, 'id'>) => {
     return apiClient.post(`/cart`, productToAdd).then(({ data }: { data: ApiCartItem }) => {
-      return data
-    })
+      return data;
+    });
   },
   updateProductQuantity: async (cartItemId: string, newQuantity: number) => {
     try {
       const response = await apiClient.patch(`/cart/${cartItemId}`, {
         quantity: newQuantity,
-      })
+      });
 
-      console.log('Updated cart item:', response.data)
+      console.log('Updated cart item:', response.data);
     } catch (error) {
-      console.error('Error updating cart item:', error)
+      console.error('Error updating cart item:', error);
     }
   },
   deleteProduct: async (cartItemId: string) => {
     try {
-      const response = await apiClient.delete(`/cart/${cartItemId}`)
-      console.log('Deleted cart item:', response.data)
+      const response = await apiClient.delete(`/cart/${cartItemId}`);
+      console.log('Deleted cart item:', response.data);
     } catch (error) {
-      console.error('Error deleting cart item:', error)
+      console.error('Error deleting cart item:', error);
     }
   },
-}
+};
 
-export default cartAPI
+export default cartAPI;

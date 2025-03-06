@@ -1,12 +1,12 @@
-import { mount, type VueWrapper } from '@vue/test-utils'
-import { createTestingPinia } from '@pinia/testing'
-import { describe, it, vi, beforeEach, expect } from 'vitest'
-import ProductsList from './ProductsList.vue'
-import useProductsStore from '@/stores/products/products'
-import productsAPI from '@/api/services/products/api'
-import { mockedProductsList } from '@/api/services/products/__mocks__/products'
-import TextField from '../shared/textField/TextField.vue'
-import useFiltersStore from '@/stores/filters/filters'
+import { mount, type VueWrapper } from '@vue/test-utils';
+import { createTestingPinia } from '@pinia/testing';
+import { describe, it, vi, beforeEach, expect } from 'vitest';
+import ProductsList from './ProductsList.vue';
+import useProductsStore from '@/stores/products/products';
+import productsAPI from '@/api/services/products/api';
+import { mockedProductsList } from '@/api/services/products/__mocks__/products';
+import TextField from '../shared/textField/TextField.vue';
+import useFiltersStore from '@/stores/filters/filters';
 
 vi.mock('vue-router', () => ({
   useRoute: vi.fn(() => ({
@@ -15,23 +15,23 @@ vi.mock('vue-router', () => ({
   useRouter: vi.fn(() => ({
     replace: vi.fn(),
   })),
-}))
+}));
 
 vi.spyOn(productsAPI, 'getProducts').mockResolvedValue({
   data: mockedProductsList,
   next: null,
-})
+});
 
 describe('ProductsList', () => {
-  let wrapper: VueWrapper
-  let productsStore: ReturnType<typeof useProductsStore>
-  let filtersStore: ReturnType<typeof useFiltersStore>
+  let wrapper: VueWrapper;
+  let productsStore: ReturnType<typeof useProductsStore>;
+  let filtersStore: ReturnType<typeof useFiltersStore>;
 
   beforeEach(async () => {
     global.IntersectionObserver = vi.fn().mockImplementation((callback) => {
-      callback([{ isIntersecting: true }], null)
-      return { observe: vi.fn(), disconnect: vi.fn() }
-    })
+      callback([{ isIntersecting: true }], null);
+      return { observe: vi.fn(), disconnect: vi.fn() };
+    });
 
     wrapper = mount(ProductsList, {
       global: {
@@ -41,43 +41,43 @@ describe('ProductsList', () => {
           }),
         ],
       },
-    })
+    });
 
-    productsStore = useProductsStore()
-    filtersStore = useFiltersStore()
+    productsStore = useProductsStore();
+    filtersStore = useFiltersStore();
 
     await productsStore.$patch({
       productsLoading: false,
       productsNextPage: 2,
       productsData: mockedProductsList,
-    })
+    });
 
     await filtersStore.$patch({
       sortBy: [
         { label: 'Name', value: 'name' },
         { label: 'Price', value: 'price' },
       ],
-    })
-  })
+    });
+  });
 
   describe('when mounted', () => {
     it('calls fetchProducts with the correct params', async () => {
-      expect(productsStore.fetchProducts).toHaveBeenCalledWith({ page: 1, sort: 'name' })
-    })
+      expect(productsStore.fetchProducts).toHaveBeenCalledWith({ page: 1, sort: 'name' });
+    });
 
     it('renders a list of products', () => {
-      const productItems = wrapper.findAll('.productItem')
+      const productItems = wrapper.findAll('.productItem');
 
-      expect(productItems.length).toBe(10)
-    })
-  })
+      expect(productItems.length).toBe(10);
+    });
+  });
 
   it('filters products based on search text', async () => {
-    await wrapper.findComponent(TextField).setValue('Laptop')
+    await wrapper.findComponent(TextField).setValue('Laptop');
 
-    const productItems = wrapper.findAll('.productItem')
-    expect(productItems.length).toBe(1)
+    const productItems = wrapper.findAll('.productItem');
+    expect(productItems.length).toBe(1);
 
-    expect(productItems[0].text()).toContain('Laptop')
-  })
-})
+    expect(productItems[0].text()).toContain('Laptop');
+  });
+});

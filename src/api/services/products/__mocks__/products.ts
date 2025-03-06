@@ -1,4 +1,4 @@
-import type { GetProductsApiResponse } from '../types'
+import type { GetProductsApiResponse } from '../types';
 
 export const mockedProductsList: GetProductsApiResponse['data'] = [
   {
@@ -81,4 +81,4 @@ export const mockedProductsList: GetProductsApiResponse['data'] = [
     image: null,
     category: 'electronics',
   },
-]
+];

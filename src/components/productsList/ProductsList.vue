@@ -37,61 +37,63 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed, ref, watch, watchEffect } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import useProductsStore from '@/stores/products/products'
-import useFiltersStore, { type SortByValue } from '@/stores/filters/filters'
-import TextField from '../shared/textField/TextField.vue'
-import ProductItem from '../productItem/ProductItem.vue'
-import SelectField from '../shared/selectField/SelectField.vue'
+import { onMounted, computed, ref, watch, watchEffect } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import useProductsStore from '@/stores/products/products';
+import useFiltersStore, { type SortByValue } from '@/stores/filters/filters';
+import TextField from '../shared/textField/TextField.vue';
+import ProductItem from '../productItem/ProductItem.vue';
+import SelectField from '../shared/selectField/SelectField.vue';
 
-const route = useRoute()
-const router = useRouter()
+const route = useRoute();
+const router = useRouter();
 
 const sortByOptions = [
   { label: 'Name', value: 'name' },
   { label: 'Price', value: 'price' },
-]
+];
 
-const loadMoreRef = ref(null)
-const productsStore = useProductsStore()
+const loadMoreRef = ref(null);
+const productsStore = useProductsStore();
 
-const products = computed(() => productsStore.productsData)
-const productsLoading = computed(() => productsStore.productsLoading)
-const productsNextPage = computed(() => productsStore.productsNextPage)
+const products = computed(() => productsStore.productsData);
+const productsLoading = computed(() => productsStore.productsLoading);
+const productsNextPage = computed(() => productsStore.productsNextPage);
 
-const filtersStore = useFiltersStore()
+const filtersStore = useFiltersStore();
 
-const currentPage = computed(() => filtersStore.currentPage)
-const sortFilter = computed(() => filtersStore.sortFilter)
-const filteringParams = computed(() => filtersStore.filteringParams)
-const searchText = computed(() => filtersStore.searchText)
+const currentPage = computed(() => filtersStore.currentPage);
+const sortFilter = computed(() => filtersStore.sortFilter);
+const filteringParams = computed(() => filtersStore.filteringParams);
+const searchText = computed(() => filtersStore.searchText);
 
 const filteredProducts = computed(() => {
-  const query = filtersStore.searchText.toLowerCase()
+  const query = filtersStore.searchText.toLowerCase();
 
   return products.value.filter(
     (item) =>
       item.name.toLowerCase().includes(query) || item.category.toLowerCase().includes(query),
-  )
-})
+  );
+});
 
-const shouldPaginate = computed(() => !!productsNextPage.value && filteredProducts.value.length > 7)
+const shouldPaginate = computed(
+  () => !!productsNextPage.value && filteredProducts.value.length > 7,
+);
 
 const loadMoreObserver = new IntersectionObserver(
   (entries) => {
     if (entries[0].isIntersecting && !!productsNextPage.value) {
-      filtersStore.setCurrentPage(filtersStore.currentPage + 1)
+      filtersStore.setCurrentPage(filtersStore.currentPage + 1);
     }
   },
   { rootMargin: '10px' },
-)
+);
 
 watch(loadMoreRef, (newValue) => {
   if (newValue) {
-    loadMoreObserver.observe(newValue)
+    loadMoreObserver.observe(newValue);
   }
-})
+});
 
 watchEffect(async () => {
   await router.replace({
@@ -100,24 +102,24 @@ watchEffect(async () => {
       ...filteringParams.value,
       search: searchText.value || undefined,
     },
-  })
-})
+  });
+});
 
 watch(
   () => route.query,
   (newRoute, oldRoute) => {
-    productsStore.fetchProducts(filteringParams.value, newRoute.sort === oldRoute.sort)
+    productsStore.fetchProducts(filteringParams.value, newRoute.sort === oldRoute.sort);
   },
   { deep: true },
-)
+);
 
 watch(searchText, () => {
-  filtersStore.setCurrentPage(1)
-})
+  filtersStore.setCurrentPage(1);
+});
 
 watch(sortFilter, () => {
-  filtersStore.setCurrentPage(1)
-})
+  filtersStore.setCurrentPage(1);
+});
 
 onMounted(() => {
   //set sortBy in store from route
@@ -128,22 +130,22 @@ onMounted(() => {
         return {
           label: option.charAt(0).toUpperCase() + option.slice(1),
           value: option,
-        }
-      })
+        };
+      });
 
-    filtersStore.setSortBy(selectedSortOptions as SortByValue)
+    filtersStore.setSortBy(selectedSortOptions as SortByValue);
   }
 
   //set searchtext in store from route
   if (route.query.search) {
-    filtersStore.setSearchText(String(route.query.search))
+    filtersStore.setSearchText(String(route.query.search));
   }
 
   productsStore.fetchProducts({
     ...filteringParams.value,
     page: currentPage.value,
-  })
-})
+  });
+});
 </script>
 
 <style scoped lang="scss">

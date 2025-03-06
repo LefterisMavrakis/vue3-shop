@@ -19,4 +19,4 @@ export const mockedCartItems = [
     image: null,
     quantity: 2,
   },
-]
+];

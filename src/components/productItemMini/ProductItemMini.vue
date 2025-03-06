@@ -39,23 +39,23 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import type { ApiCartItem } from '@/api/services/cart/types'
-import useCartStore from '@/stores/cart/cart'
-import IconMinus from '../icons/IconMinus.vue'
-import IconPlus from '../icons/IconPlus.vue'
-import IconTrash from '../icons/IconTrash.vue'
-import { convertToEuroPrice } from '@/utils/utils'
-import vRipple from '@/directives/v-ripple/ripple'
-import imagePlaceholder from '@/assets/png/iphone16.png'
+import { computed } from 'vue';
+import type { ApiCartItem } from '@/api/services/cart/types';
+import useCartStore from '@/stores/cart/cart';
+import IconMinus from '../icons/IconMinus.vue';
+import IconPlus from '../icons/IconPlus.vue';
+import IconTrash from '../icons/IconTrash.vue';
+import { convertToEuroPrice } from '@/utils/utils';
+import vRipple from '@/directives/v-ripple/ripple';
+import imagePlaceholder from '@/assets/png/iphone16.png';
 
-type Props = ApiCartItem
+type Props = ApiCartItem;
 
-const props = defineProps<Props>()
+const props = defineProps<Props>();
 
-const cartStore = useCartStore()
+const cartStore = useCartStore();
 
-const formattedPrice = computed(() => convertToEuroPrice(props.price))
+const formattedPrice = computed(() => convertToEuroPrice(props.price));
 
 const handlePlusClick = async () => {
   await cartStore.addProductToCart({
@@ -65,16 +65,16 @@ const handlePlusClick = async () => {
     image: props.image,
     category: props.category,
     price: props.price,
-  })
-}
+  });
+};
 
 const handleDeleteClick = async () => {
-  await cartStore.deleteProductFromCart(props.id, true)
-}
+  await cartStore.deleteProductFromCart(props.id, true);
+};
 
 const handleMinusClick = async () => {
-  await cartStore.deleteProductFromCart(props.id)
-}
+  await cartStore.deleteProductFromCart(props.id);
+};
 </script>
 
 <style scoped lang="scss">

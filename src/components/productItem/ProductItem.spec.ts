@@ -1,9 +1,9 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest'
-import { mount, type VueWrapper } from '@vue/test-utils'
-import ProductItem from './ProductItem.vue'
-import { createTestingPinia } from '@pinia/testing'
-import type { ApiProduct } from '@/api/services/products/types'
-import useCartStore from '@/stores/cart/cart'
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { mount, type VueWrapper } from '@vue/test-utils';
+import ProductItem from './ProductItem.vue';
+import { createTestingPinia } from '@pinia/testing';
+import type { ApiProduct } from '@/api/services/products/types';
+import useCartStore from '@/stores/cart/cart';
 
 const mockProduct: ApiProduct = {
   id: '1',
@@ -12,10 +12,10 @@ const mockProduct: ApiProduct = {
   category: 'test category',
   price: 200,
   image: null,
-}
+};
 
 describe('ProductItem', () => {
-  let wrapper: VueWrapper
+  let wrapper: VueWrapper;
 
   beforeEach(() => {
     wrapper = mount(ProductItem, {
@@ -27,32 +27,32 @@ describe('ProductItem', () => {
           }),
         ],
       },
-    })
-  })
+    });
+  });
 
   it('renders product name, description, and formatted price', () => {
-    expect(wrapper.text()).toContain(mockProduct.name)
-    expect(wrapper.text()).toContain(mockProduct.description)
+    expect(wrapper.text()).toContain(mockProduct.name);
+    expect(wrapper.text()).toContain(mockProduct.description);
     expect(wrapper.text()).toContain(
       new Intl.NumberFormat('de-DE', {
         style: 'currency',
         currency: 'EUR',
       }).format(Number(mockProduct.price)),
-    )
-  })
+    );
+  });
 
   it('renders the add to cart button', () => {
-    const button = wrapper.find('.addToCart')
-    expect(button.exists()).toBe(true)
-    expect(button.text()).toBe('Add to cart')
-  })
+    const button = wrapper.find('.addToCart');
+    expect(button.exists()).toBe(true);
+    expect(button.text()).toBe('Add to cart');
+  });
 
   it('makes call to add cart item when clicks the add to cart button', async () => {
-    const cartStore = useCartStore()
+    const cartStore = useCartStore();
 
-    const button = wrapper.find('.addToCart')
+    const button = wrapper.find('.addToCart');
 
-    await button.trigger('click')
+    await button.trigger('click');
 
     expect(cartStore.addProductToCart).toHaveBeenCalledWith({
       category: 'test category',
@@ -61,6 +61,6 @@ describe('ProductItem', () => {
       name: 'Test Product',
       price: 200,
       productId: '1',
-    })
-  })
-})
+    });
+  });
+});

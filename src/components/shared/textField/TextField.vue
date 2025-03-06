@@ -16,40 +16,40 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, defineProps, defineEmits } from 'vue'
-import IconClose from '@/components/icons/IconClose.vue'
+import { ref, watch, defineProps, defineEmits } from 'vue';
+import IconClose from '@/components/icons/IconClose.vue';
 
 const props = defineProps<{
-  modelValue: string
-  placeholder?: string
-  debounce?: number
-  clearale?: boolean
-}>()
+  modelValue: string;
+  placeholder?: string;
+  debounce?: number;
+  clearale?: boolean;
+}>();
 
 const emit = defineEmits<{
-  (e: 'update:modelValue', value: string): void
-}>()
+  (e: 'update:modelValue', value: string): void;
+}>();
 
-const inputValue = ref(props.modelValue)
-let timeout: ReturnType<typeof setTimeout> | null = null
+const inputValue = ref(props.modelValue);
+let timeout: ReturnType<typeof setTimeout> | null = null;
 
 const handleClear = () => {
-  inputValue.value = ''
-}
+  inputValue.value = '';
+};
 
 watch(
   () => props.modelValue,
   (newValue) => {
-    inputValue.value = newValue
+    inputValue.value = newValue;
   },
-)
+);
 
 watch(inputValue, (newValue) => {
   if (props.debounce) {
-    if (timeout) clearTimeout(timeout)
-    timeout = setTimeout(() => emit('update:modelValue', newValue), props.debounce)
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(() => emit('update:modelValue', newValue), props.debounce);
   } else {
-    emit('update:modelValue', newValue)
+    emit('update:modelValue', newValue);
   }
-})
+});
 </script>
