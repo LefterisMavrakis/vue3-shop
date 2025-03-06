@@ -20,6 +20,12 @@ import AppHeader from '@/components/header/AppHeader.vue'
 </script>
 
 <style scoped lang="scss">
+header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-max);
+}
+
 .mainLayoutWrapper {
   display: flex;
   flex-direction: column;
@@ -27,9 +33,7 @@ import AppHeader from '@/components/header/AppHeader.vue'
 }
 
 .mainWrapper {
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  background: var(--main-gradient-bg);
+  background: var(--vt-c-white);
   flex: 1;
   height: 100%;
 }

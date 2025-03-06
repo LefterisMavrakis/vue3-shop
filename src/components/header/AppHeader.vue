@@ -1,6 +1,6 @@
 <template>
   <div class="appHeader flex justify-between gap-3">
-    <div class="logoContainer textTitle xl">Logo</div>
+    <div class="logoContainer textTitle xl">Marketplace</div>
     <div class="cartContainer">
       <MiniCart />
     </div>

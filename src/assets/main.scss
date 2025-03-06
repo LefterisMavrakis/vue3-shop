@@ -8,6 +8,10 @@ body {
   margin: 0 auto;
   background-color: var(--dark-blue);
   font-weight: 14px;
+
+  * {
+    font-family: 'Montserrat', sans-serif;
+  }
 }
 
 #app {
@@ -18,11 +22,13 @@ body {
 .mainField {
   width: 100%;
   max-width: 400px;
-  border: none;
+  border: 1px solid #b1afaf;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   gap: 4px;
   background-color: #fff;
+  border-radius: var(--border-2);
 
   input {
     border: none;
@@ -47,7 +53,7 @@ body {
 }
 
 .mainBorder {
-  border-radius: 16px;
+  border-radius: var(--border-2);
 }
 
 .textTitle {

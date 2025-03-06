@@ -11,7 +11,7 @@
   --vt-c-indigo: #2c3e50;
 
   --muted: #c2bebe;
-  --dark-blue: #0e0063;
+  --dark-blue: #02000e;
   --main-gradient-bg: linear-gradient(87.77deg, #dbcdf1 1.88%, #dfdfe9 51.92%, #dcd7e5 97.2%);
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
@@ -23,6 +23,14 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --border-1: 4px;
+  --border-2: 8px;
+  --border-3: 12px;
+  --border-4: 16px;
+  --border-circle: 50%;
+
+  --z-index-max: 2000
 }
 
 /* semantic color variables for this project */

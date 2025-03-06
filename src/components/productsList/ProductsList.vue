@@ -86,8 +86,9 @@ onMounted(() => {
 <style scoped lang="scss">
 .productListTopSection {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 
