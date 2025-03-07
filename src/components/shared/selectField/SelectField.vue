@@ -1,7 +1,7 @@
 <template>
   <div class="selectField mainBorder">
     <div class="fieldBody">
-      <span class="fieldLabel">Sorty by</span>
+      <span class="fieldLabel">{{ props.label ?? 'Select' }}</span>
 
       <div class="selectedItems flex justify-center">
         <span v-for="item in modelValue" :key="item.value" class="selectedItem">
@@ -29,6 +29,7 @@ import { defineProps, defineEmits, ref } from 'vue';
 
 type Props = {
   modelValue: Option[];
+  label?: string;
   options: Option[];
   multiselect?: boolean;
 };

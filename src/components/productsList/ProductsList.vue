@@ -14,6 +14,7 @@
         <SelectField
           v-model="filtersStore.sortBy"
           multiselect
+          label="Sort by"
           :options="sortByOptions"
           @update:model-value="filtersStore.setCurrentPage(1)"
         />
