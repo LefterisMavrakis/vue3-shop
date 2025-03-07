@@ -4,6 +4,7 @@ import { createTestingPinia } from '@pinia/testing';
 import { mockedCartItems } from '@/api/services/cart/__mocks__/cartItems';
 import useCartStore from '@/stores/cart/cart';
 import MiniCart from './MiniCart.vue';
+import { convertToEuroPrice } from '@/utils/utils';
 
 describe('MiniCart', () => {
   let wrapper: VueWrapper;
@@ -29,9 +30,16 @@ describe('MiniCart', () => {
     expect(cartStore.fetchCartProducts).toHaveBeenCalled();
   });
 
-  it('renders the correct items count', async () => {
+  it('renders the correct items count and total', async () => {
+    const itemsTotal = convertToEuroPrice(cartStore.cartItemsTotal);
+
     expect(wrapper.find('.cartItemsCount').exists()).toBe(true);
     expect(wrapper.find('.cartItemsCount').text()).toBe('3');
+    expect(wrapper.find('.totalSection').text()).toContain(itemsTotal);
+  });
+
+  it('renders checkout button', () => {
+    expect(wrapper.find('.checkoutButton').exists()).toBe(true);
   });
 
   describe('when clicks the mini cart icon', () => {

@@ -10,6 +10,10 @@ const useCartStore = defineStore('cart', () => {
   const addToCartLoading = ref(false);
   const deleteFromCartLoading = ref(false);
 
+  const cartItemsCount = computed(() =>
+    cartData.value.reduce((acc, item) => acc + item.quantity, 0),
+  );
+
   const cartItemsTotal = computed(() =>
     cartData.value.reduce((acc, item) => acc + item.price * item.quantity, 0),
   );
@@ -83,6 +87,7 @@ const useCartStore = defineStore('cart', () => {
     deleteFromCartLoading,
     cartItemsTotal,
     formattedTotal,
+    cartItemsCount,
   };
 });
 

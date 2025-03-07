@@ -18,7 +18,7 @@ const cartAPI = {
         quantity: newQuantity,
       });
 
-      console.log('Updated cart item:', response.data);
+      return response;
     } catch (error) {
       console.error('Error updating cart item:', error);
     }
@@ -26,7 +26,7 @@ const cartAPI = {
   deleteProduct: async (cartItemId: string) => {
     try {
       const response = await apiClient.delete(`/cart/${cartItemId}`);
-      console.log('Deleted cart item:', response.data);
+      return response;
     } catch (error) {
       console.error('Error deleting cart item:', error);
     }

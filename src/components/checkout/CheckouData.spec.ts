@@ -30,8 +30,8 @@ describe('CheckoutData', () => {
     expect(cartStore.fetchCartProducts).toHaveBeenCalled();
   });
 
-  it('renders the correct items total', async () => {
+  it('renders the correct items total and count', async () => {
     const itemsTotal = convertToEuroPrice(cartStore.cartItemsTotal);
-    expect(wrapper.find('.totalSection').text()).toBe(`Total: ${itemsTotal}`);
+    expect(wrapper.find('.totalSection').text()).toBe(`Items: 3Total: ${itemsTotal}`);
   });
 });

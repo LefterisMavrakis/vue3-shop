@@ -26,7 +26,12 @@
           <template v-else> Let's buy something</template>
         </div>
 
-        <div class="totalSection textTitle">Total: {{ formattedTotal }}</div>
+        <div class="totalSection flex column gap-2">
+          <div class="totalSection textTitle">Total: {{ formattedTotal }}</div>
+          <RouterLink to="/checkout">
+            <div v-ripple class="checkoutButton mainButton" @click="toggleCart">Checkout</div>
+          </RouterLink>
+        </div>
       </div>
     </transition>
   </div>
@@ -43,9 +48,7 @@ import vRipple from '@/directives/v-ripple/ripple';
 const cartStore = useCartStore();
 
 const cartItems = computed(() => cartStore.cartData);
-const cartItemsCount = computed(() =>
-  cartItems.value.reduce((acc, item) => acc + item.quantity, 0),
-);
+const cartItemsCount = computed(() => cartStore.cartItemsCount);
 
 const formattedTotal = computed(() => {
   return cartStore.formattedTotal;

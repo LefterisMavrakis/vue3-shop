@@ -403,324 +403,74 @@
   ],
   "cart": [
     {
-      "id": "039b",
-      "productId": "29",
-      "name": "Baseball Cap",
-      "description": "Casual headwear.",
-      "image": "https://picsum.photos/200/300?random=29",
-      "category": "clothing",
-      "price": 20,
-      "quantity": 7
-    },
-    {
-      "id": "c3e5",
-      "productId": "3",
-      "name": "MacBook Pro",
-      "description": "Powerful laptop.",
-      "image": "https://picsum.photos/200/300?random=3",
-      "category": "electronics",
-      "price": 2500,
-      "quantity": 5
-    },
-    {
-      "id": "e9e3",
+      "id": "b8bb",
       "productId": "8",
       "name": "Dell XPS 15",
       "description": "Sleek design.",
       "image": "https://picsum.photos/200/300?random=8",
       "category": "electronics",
       "price": 2200,
-      "quantity": 5
+      "quantity": 11
     },
     {
-      "id": "1bdc",
-      "productId": "45",
-      "name": "Polo Shirt",
-      "description": "Classic casual wear.",
-      "image": "https://picsum.photos/200/300?random=45",
-      "category": "clothing",
-      "price": 35,
-      "quantity": 4
-    },
-    {
-      "id": "7bc6",
-      "productId": "30",
-      "name": "Sunglasses",
-      "description": "UV protection.",
-      "image": "https://picsum.photos/200/300?random=30",
-      "category": "clothing",
-      "price": 40,
-      "quantity": 4
-    },
-    {
-      "id": "c98e",
-      "productId": "41",
-      "name": "Yoga Pants",
-      "description": "Stretchy and comfortable.",
-      "image": "https://picsum.photos/200/300?random=41",
-      "category": "clothing",
-      "price": 45,
-      "quantity": 8
-    },
-    {
-      "id": "3ad6",
-      "productId": "26",
-      "name": "Formal Shirt",
-      "description": "Perfect for office wear.",
-      "image": "https://picsum.photos/200/300?random=26",
-      "category": "clothing",
-      "price": 50,
-      "quantity": 1
-    },
-    {
-      "id": "ae4e",
-      "productId": "44",
-      "name": "Canvas Sneakers",
-      "description": "Casual footwear.",
-      "image": "https://picsum.photos/200/300?random=44",
-      "category": "clothing",
-      "price": 55,
-      "quantity": 2
-    },
-    {
-      "id": "db69",
-      "productId": "14",
-      "name": "Minimalist Hoodie",
-      "description": "Simple design.",
-      "image": "https://picsum.photos/200/300?random=14",
-      "category": "clothing",
-      "price": 90,
-      "quantity": 2
-    },
-    {
-      "id": "2266",
-      "productId": "42",
-      "name": "Windbreaker Jacket",
-      "description": "Lightweight and waterproof.",
-      "image": "https://picsum.photos/200/300?random=42",
-      "category": "clothing",
-      "price": 85,
-      "quantity": 3
-    },
-    {
-      "id": "caac",
-      "productId": "34",
-      "name": "Bluetooth Speaker",
-      "description": "Portable sound.",
-      "image": "https://picsum.photos/200/300?random=34",
-      "category": "electronics",
-      "price": 80,
-      "quantity": 3
-    },
-    {
-      "id": "3511",
-      "productId": "21",
-      "name": "Cotton T-Shirt",
-      "description": "Comfortable fit.",
-      "image": "https://picsum.photos/200/300?random=21",
-      "category": "clothing",
-      "price": 25,
-      "quantity": 2
-    },
-    {
-      "id": "59e2",
-      "productId": "49",
-      "name": "Scarf",
-      "description": "Soft and warm.",
-      "image": "https://picsum.photos/200/300?random=49",
-      "category": "clothing",
-      "price": 25,
-      "quantity": 1
-    },
-    {
-      "id": "5762",
-      "productId": "33",
-      "name": "Wireless Charger",
-      "description": "Fast charging pad.",
-      "image": "https://picsum.photos/200/300?random=33",
-      "category": "electronics",
-      "price": 30,
-      "quantity": 3
-    },
-    {
-      "id": "ba7b",
+      "id": "2195",
       "productId": "40",
       "name": "Electric Kettle",
       "description": "Fast boiling.",
       "image": "https://picsum.photos/200/300?random=40",
       "category": "electronics",
       "price": 50,
-      "quantity": 2
+      "quantity": 8
     },
     {
-      "id": "720a",
-      "productId": "11",
-      "name": "Casual Hoodie",
-      "description": "Soft and warm.",
-      "image": "https://picsum.photos/200/300?random=11",
-      "category": "clothing",
-      "price": 60,
-      "quantity": 5
-    },
-    {
-      "id": "4666",
-      "productId": "50",
-      "name": "Backpack",
-      "description": "Durable and spacious.",
-      "image": "https://picsum.photos/200/300?random=50",
-      "category": "clothing",
-      "price": 60,
-      "quantity": 3
-    },
-    {
-      "id": "8e01",
+      "id": "49b8",
       "productId": "39",
       "name": "4K Action Camera",
       "description": "Waterproof camera.",
       "image": "https://picsum.photos/200/300?random=39",
       "category": "electronics",
       "price": 250,
-      "quantity": 8
-    },
-    {
-      "id": "cc50",
-      "productId": "36",
-      "name": "External SSD",
-      "description": "High-speed storage.",
-      "image": "https://picsum.photos/200/300?random=36",
-      "category": "electronics",
-      "price": 150,
       "quantity": 1
     },
     {
-      "id": "63ac",
-      "productId": "22",
-      "name": "Denim Jeans",
-      "description": "Classic style.",
-      "image": "https://picsum.photos/200/300?random=22",
-      "category": "clothing",
-      "price": 70,
-      "quantity": 1
-    },
-    {
-      "id": "29ab",
-      "productId": "1",
-      "name": "iPhone 15",
-      "description": "Latest model.",
-      "image": "https://picsum.photos/200/300?random=1",
-      "category": "electronics",
-      "price": 1200,
-      "quantity": 1
-    },
-    {
-      "id": "1e1e",
-      "productId": "43",
-      "name": "Knit Beanie",
-      "description": "Warm hat.",
-      "image": "https://picsum.photos/200/300?random=43",
-      "category": "clothing",
-      "price": 15,
-      "quantity": 1
-    },
-    {
-      "id": "7534",
-      "productId": "23",
-      "name": "Leather Jacket",
-      "description": "Durable and stylish.",
-      "image": "https://picsum.photos/200/300?random=23",
-      "category": "clothing",
-      "price": 200,
-      "quantity": 1
-    },
-    {
-      "id": "40e0",
-      "productId": "32",
-      "name": "Robot Vacuum",
-      "description": "Automated cleaning.",
-      "image": "https://picsum.photos/200/300?random=32",
-      "category": "electronics",
-      "price": 300,
-      "quantity": 1
-    },
-    {
-      "id": "7133",
-      "productId": "25",
-      "name": "Running Shoes",
-      "description": "Lightweight and breathable.",
-      "image": "https://picsum.photos/200/300?random=25",
-      "category": "clothing",
-      "price": 120,
-      "quantity": 1
-    },
-    {
-      "id": "23ae",
-      "productId": "37",
-      "name": "Smart Doorbell",
-      "description": "Video doorbell.",
-      "image": "https://picsum.photos/200/300?random=37",
-      "category": "electronics",
-      "price": 180,
-      "quantity": 4
-    },
-    {
-      "id": "f8aa",
-      "productId": "31",
-      "name": "Smart Thermostat",
-      "description": "Energy-saving device.",
-      "image": "https://picsum.photos/200/300?random=31",
-      "category": "electronics",
-      "price": 200,
-      "quantity": 3
-    },
-    {
-      "id": "b1c6",
-      "productId": "28",
-      "name": "Wool Sweater",
-      "description": "Soft and warm.",
-      "image": "https://picsum.photos/200/300?random=28",
-      "category": "clothing",
-      "price": 90,
-      "quantity": 2
-    },
-    {
-      "id": "9fcb",
-      "productId": "15",
-      "name": "Google Pixel 7",
-      "description": "Great camera.",
-      "image": "https://picsum.photos/200/300?random=15",
-      "category": "electronics",
-      "price": 800,
-      "quantity": 1
-    },
-    {
-      "id": "e351",
+      "id": "48b5",
       "productId": "6",
       "name": "AirPods Pro",
       "description": "Noise canceling.",
       "image": "https://picsum.photos/200/300?random=6",
       "category": "electronics",
       "price": 250,
-      "quantity": 4
-    },
-    {
-      "id": "c839",
-      "productId": "5",
-      "name": "Apple Watch",
-      "description": "Health tracker.",
-      "image": "https://picsum.photos/200/300?random=5",
-      "category": "electronics",
-      "price": 500,
-      "quantity": 2
-    },
-    {
-      "id": "5763",
-      "productId": "17",
-      "name": "Asus ROG Zephyrus",
-      "description": "Gaming laptop.",
-      "image": "https://picsum.photos/200/300?random=17",
-      "category": "electronics",
-      "price": 1800,
       "quantity": 1
+    },
+    {
+      "id": "bd04",
+      "productId": "18",
+      "name": "Bose QuietComfort 45",
+      "description": "Noise-canceling headphones.",
+      "image": "https://picsum.photos/200/300?random=18",
+      "category": "electronics",
+      "price": 350,
+      "quantity": 11
+    },
+    {
+      "id": "edb1",
+      "productId": "11",
+      "name": "Casual Hoodie",
+      "description": "Soft and warm.",
+      "image": "https://picsum.photos/200/300?random=11",
+      "category": "clothing",
+      "price": 60,
+      "quantity": 6
+    },
+    {
+      "id": "144d",
+      "productId": "27",
+      "name": "Cargo Pants",
+      "description": "Functional and stylish.",
+      "image": "https://picsum.photos/200/300?random=27",
+      "category": "clothing",
+      "price": 60,
+      "quantity": 7
     }
   ]
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="selectField">
+  <div class="selectField mainBorder">
     <div class="fieldBody">
       <span class="fieldLabel">Sorty by</span>
 
@@ -72,7 +72,6 @@ const removeItem = (item: Option) => {
   flex-direction: column;
   gap: 8px;
   border: 1px solid var(--vt-c-divider-light-1);
-  border-radius: var(--border-radius-2);
 
   .fieldBody {
     display: flex;

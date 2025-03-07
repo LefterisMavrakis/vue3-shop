@@ -19,7 +19,10 @@
             <template v-else>Loading cart products...</template>
           </div>
 
-          <div class="totalSection">Total: {{ formattedTotal }}</div>
+          <div class="totalSection flex justify-center gap-3">
+            <span class="textTitle">Items: {{ cartItemsCount }}</span>
+            <span class="textTitle">Total: {{ formattedTotal }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -38,6 +41,7 @@ const cartProductsLoading = computed(() => cartStore.cartLoading);
 const formattedTotal = computed(() => {
   return cartStore.formattedTotal;
 });
+const cartItemsCount = computed(() => cartStore.cartItemsCount);
 
 onMounted(async () => {
   await cartStore.fetchCartProducts();

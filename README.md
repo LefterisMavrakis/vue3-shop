@@ -34,7 +34,7 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
      ```bash
      npm run dev
      ```
-  4. Run the mock server (using JSON Server):
+  4. Run the mock server in a different console tab:
      ```bash
      npx json-server src/api/db/db.json
      ```
@@ -65,16 +65,24 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
   - Adjust quantities of products.
   - View the total price of items in the cart.
 
-#### 2.4 **UI and Responsiveness**
+#### 2.4 **Checkout Page**
+
+- As per minicart component, the checkout page allows users to view products added to the shopping basket.
+- Users can:
+  - Remove products from the cart.
+  - Adjust quantities of products.
+  - View the total price of items in the cart.
+
+#### 2.5 **UI and Responsiveness**
 
 - Focused on building a simple and responsive UI.
 - The application layout adjusts based on the device's screen size, providing a smooth experience on both mobile and desktop devices.
 
-#### 2.5 **Sorting Options**
+#### 2.6 **Sorting Options**
 
 - Products can be sorted by **price** or **name** using a dropdown.
 
-#### 2.6 **Custom Shared Components**
+#### 2.7 **Custom Shared Components**
 
 - Developed shared components like **TextField** and **SelectField** to maintain consistency across the app.
 - These components can be reused throughout the project, reducing duplication and enhancing maintainability.
