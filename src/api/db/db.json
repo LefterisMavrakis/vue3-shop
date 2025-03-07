@@ -691,6 +691,36 @@
       "category": "electronics",
       "price": 800,
       "quantity": 1
+    },
+    {
+      "id": "e351",
+      "productId": "6",
+      "name": "AirPods Pro",
+      "description": "Noise canceling.",
+      "image": "https://picsum.photos/200/300?random=6",
+      "category": "electronics",
+      "price": 250,
+      "quantity": 3
+    },
+    {
+      "id": "c839",
+      "productId": "5",
+      "name": "Apple Watch",
+      "description": "Health tracker.",
+      "image": "https://picsum.photos/200/300?random=5",
+      "category": "electronics",
+      "price": 500,
+      "quantity": 2
+    },
+    {
+      "id": "5763",
+      "productId": "17",
+      "name": "Asus ROG Zephyrus",
+      "description": "Gaming laptop.",
+      "image": "https://picsum.photos/200/300?random=17",
+      "category": "electronics",
+      "price": 1800,
+      "quantity": 1
     }
   ]
 }

@@ -8,12 +8,18 @@ import { mockedProductsList } from '@/api/services/products/__mocks__/products';
 import TextField from '../shared/textField/TextField.vue';
 import useFiltersStore from '@/stores/filters/filters';
 
+let mockRouteQuery = { page: '1' };
+
+const mockedReplaceRouter = vi.fn((newQuery) => {
+  mockRouteQuery = { ...mockRouteQuery, ...newQuery.query };
+});
+
 vi.mock('vue-router', () => ({
   useRoute: vi.fn(() => ({
-    query: { page: '1' },
+    query: mockRouteQuery,
   })),
   useRouter: vi.fn(() => ({
-    replace: vi.fn(),
+    replace: mockedReplaceRouter,
   })),
 }));
 
@@ -28,6 +34,7 @@ describe('ProductsList', () => {
   let filtersStore: ReturnType<typeof useFiltersStore>;
 
   beforeEach(async () => {
+    vi.clearAllMocks();
     global.IntersectionObserver = vi.fn().mockImplementation((callback) => {
       callback([{ isIntersecting: true }], null);
       return { observe: vi.fn(), disconnect: vi.fn() };
@@ -79,5 +86,23 @@ describe('ProductsList', () => {
     expect(productItems.length).toBe(1);
 
     expect(productItems[0].text()).toContain('Laptop');
+  });
+
+  describe('when filters change', () => {
+    it('replaces query with filtering params', async () => {
+      await filtersStore.$patch({
+        sortBy: [
+          { label: 'Name', value: 'name' },
+          { label: 'Price', value: 'price' },
+        ],
+      });
+
+      expect(mockedReplaceRouter).toHaveBeenNthCalledWith(2, {
+        query: {
+          page: 1,
+          sort: 'name,price',
+        },
+      });
+    });
   });
 });

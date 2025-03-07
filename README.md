@@ -38,6 +38,10 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
      ```bash
      npx json-server src/api/db/db.json
      ```
+  5. Run unit tests:
+     ```bash
+     npx vitest
+     ```
 
 ---
 

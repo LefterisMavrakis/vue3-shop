@@ -95,6 +95,7 @@ watch(loadMoreRef, (newValue) => {
   }
 });
 
+// filters store is responsible to set query params
 watchEffect(async () => {
   await router.replace({
     query: {
@@ -105,6 +106,7 @@ watchEffect(async () => {
   });
 });
 
+// query params are responsible to fetch new data
 watch(
   () => route.query,
   (newRoute, oldRoute) => {
