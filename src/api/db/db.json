@@ -403,74 +403,44 @@
   ],
   "cart": [
     {
-      "id": "b8bb",
-      "productId": "8",
-      "name": "Dell XPS 15",
-      "description": "Sleek design.",
-      "image": "https://picsum.photos/200/300?random=8",
-      "category": "electronics",
-      "price": 2200,
-      "quantity": 11
-    },
-    {
-      "id": "2195",
-      "productId": "40",
-      "name": "Electric Kettle",
-      "description": "Fast boiling.",
-      "image": "https://picsum.photos/200/300?random=40",
-      "category": "electronics",
-      "price": 50,
-      "quantity": 8
-    },
-    {
-      "id": "49b8",
-      "productId": "39",
-      "name": "4K Action Camera",
-      "description": "Waterproof camera.",
-      "image": "https://picsum.photos/200/300?random=39",
-      "category": "electronics",
-      "price": 250,
-      "quantity": 1
-    },
-    {
-      "id": "48b5",
+      "id": "a033",
       "productId": "6",
       "name": "AirPods Pro",
       "description": "Noise canceling.",
       "image": "https://picsum.photos/200/300?random=6",
       "category": "electronics",
       "price": 250,
-      "quantity": 1
-    },
-    {
-      "id": "bd04",
-      "productId": "18",
-      "name": "Bose QuietComfort 45",
-      "description": "Noise-canceling headphones.",
-      "image": "https://picsum.photos/200/300?random=18",
-      "category": "electronics",
-      "price": 350,
-      "quantity": 11
-    },
-    {
-      "id": "edb1",
-      "productId": "11",
-      "name": "Casual Hoodie",
-      "description": "Soft and warm.",
-      "image": "https://picsum.photos/200/300?random=11",
-      "category": "clothing",
-      "price": 60,
       "quantity": 6
     },
     {
-      "id": "144d",
-      "productId": "27",
-      "name": "Cargo Pants",
-      "description": "Functional and stylish.",
-      "image": "https://picsum.photos/200/300?random=27",
+      "id": "9cce",
+      "productId": "12",
+      "name": "Sport Hoodie",
+      "description": "Breathable fabric.",
+      "image": "https://picsum.photos/200/300?random=12",
       "category": "clothing",
-      "price": 60,
-      "quantity": 7
+      "price": 80,
+      "quantity": 1
+    },
+    {
+      "id": "e256",
+      "productId": "41",
+      "name": "Yoga Pants",
+      "description": "Stretchy and comfortable.",
+      "image": "https://picsum.photos/200/300?random=41",
+      "category": "clothing",
+      "price": 45,
+      "quantity": 3
+    },
+    {
+      "id": "77fd",
+      "productId": "28",
+      "name": "Wool Sweater",
+      "description": "Soft and warm.",
+      "image": "https://picsum.photos/200/300?random=28",
+      "category": "clothing",
+      "price": 90,
+      "quantity": 1
     }
   ]
 }

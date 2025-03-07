@@ -27,9 +27,11 @@
         </div>
 
         <div class="totalSection flex column gap-2">
-          <div class="totalSection textTitle">Total: {{ formattedTotal }}</div>
+          <div class="textTitle">Total: {{ formattedTotal }}</div>
           <RouterLink to="/checkout">
-            <div v-ripple class="checkoutButton mainButton" @click="toggleCart">Checkout</div>
+            <div v-ripple class="checkoutButton mainButton" @click="toggleCart">
+              Checkout
+            </div>
           </RouterLink>
         </div>
       </div>

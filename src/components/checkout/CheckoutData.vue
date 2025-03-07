@@ -67,6 +67,8 @@ onMounted(async () => {
       text-align: center;
       border-top: 1px solid var(--vt-c-divider-light-1);
       z-index: 10;
+      border-bottom-left-radius: var(--border-radius-4);
+      border-bottom-right-radius: var(--border-radius-4);
     }
   }
 }
