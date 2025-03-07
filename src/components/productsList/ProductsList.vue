@@ -1,7 +1,7 @@
 <template>
   <div class="flex column gap-6" data-testid="product-list">
     <div class="productListTopSection">
-      <div class="textTitle xl">Products</div>
+      <h3 class="textTitle xl">Products</h3>
 
       <div class="filtersWrapper">
         <TextField

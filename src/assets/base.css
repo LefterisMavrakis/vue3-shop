@@ -32,6 +32,7 @@
   --border-radius-circle: 50%;
   --muted-bg: rgba(0, 0, 0, 0.04);
   --z-index-max: 2000;
+  --constraint-container: 1300px;
 }
 
 /* semantic color variables for this project */

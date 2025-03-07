@@ -37,7 +37,6 @@ import { computed, onMounted, ref } from 'vue';
 import useCartStore from '@/stores/cart/cart';
 import IconClose from '@/components/icons/IconClose.vue';
 import IconBasket from '@/components/icons/IconBasket.vue';
-import { convertToEuroPrice } from '@/utils/utils';
 import ProductItemMini from '../productItemMini/ProductItemMini.vue';
 import vRipple from '@/directives/v-ripple/ripple';
 
@@ -47,10 +46,9 @@ const cartItems = computed(() => cartStore.cartData);
 const cartItemsCount = computed(() =>
   cartItems.value.reduce((acc, item) => acc + item.quantity, 0),
 );
-const cartItemsTotal = computed(() => cartItems.value.reduce((acc, item) => acc + item.price, 0));
 
 const formattedTotal = computed(() => {
-  return convertToEuroPrice(cartItemsTotal.value);
+  return cartStore.formattedTotal;
 });
 
 const isCartVisible = ref(false);

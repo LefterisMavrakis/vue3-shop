@@ -1,6 +1,8 @@
 <template>
   <div class="appHeader flex justify-between gap-3">
-    <div class="logoContainer textTitle xl">Marketplace</div>
+    <div class="logoContainer textTitle xl">
+      <RouterLink to="/">Marketplace</RouterLink>
+    </div>
     <div class="cartContainer">
       <MiniCart />
     </div>
@@ -8,6 +10,7 @@
 </template>
 
 <script setup lang="ts">
+import { RouterLink } from 'vue-router';
 import MiniCart from '../miniCart/MiniCart.vue';
 </script>
 

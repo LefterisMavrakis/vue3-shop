@@ -1,13 +1,20 @@
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { defineStore } from 'pinia';
 import type { ApiCartItem, GetCartApiResponse } from '@/api/services/cart/types';
 import cartAPI from '@/api/services/cart/api';
+import { convertToEuroPrice } from '@/utils/utils';
 
 const useCartStore = defineStore('cart', () => {
   const cartData = ref<GetCartApiResponse>([]);
   const cartLoading = ref(true);
   const addToCartLoading = ref(false);
   const deleteFromCartLoading = ref(false);
+
+  const cartItemsTotal = computed(() => cartData.value.reduce((acc, item) => acc + item.price, 0));
+
+  const formattedTotal = computed(() => {
+    return convertToEuroPrice(cartItemsTotal.value);
+  });
 
   const fetchCartProducts = async () => {
     try {
@@ -72,6 +79,8 @@ const useCartStore = defineStore('cart', () => {
     addToCartLoading,
     deleteProductFromCart,
     deleteFromCartLoading,
+    cartItemsTotal,
+    formattedTotal,
   };
 });
 

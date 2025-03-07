@@ -410,7 +410,7 @@
       "image": "https://picsum.photos/200/300?random=29",
       "category": "clothing",
       "price": 20,
-      "quantity": 4
+      "quantity": 7
     },
     {
       "id": "c3e5",
@@ -420,7 +420,7 @@
       "image": "https://picsum.photos/200/300?random=3",
       "category": "electronics",
       "price": 2500,
-      "quantity": 3
+      "quantity": 5
     },
     {
       "id": "e9e3",
@@ -430,7 +430,7 @@
       "image": "https://picsum.photos/200/300?random=8",
       "category": "electronics",
       "price": 2200,
-      "quantity": 2
+      "quantity": 5
     },
     {
       "id": "1bdc",
@@ -440,7 +440,7 @@
       "image": "https://picsum.photos/200/300?random=45",
       "category": "clothing",
       "price": 35,
-      "quantity": 1
+      "quantity": 4
     },
     {
       "id": "7bc6",
@@ -450,7 +450,7 @@
       "image": "https://picsum.photos/200/300?random=30",
       "category": "clothing",
       "price": 40,
-      "quantity": 1
+      "quantity": 4
     },
     {
       "id": "c98e",
@@ -490,7 +490,7 @@
       "image": "https://picsum.photos/200/300?random=14",
       "category": "clothing",
       "price": 90,
-      "quantity": 3
+      "quantity": 2
     },
     {
       "id": "2266",
@@ -700,7 +700,7 @@
       "image": "https://picsum.photos/200/300?random=6",
       "category": "electronics",
       "price": 250,
-      "quantity": 3
+      "quantity": 4
     },
     {
       "id": "c839",
