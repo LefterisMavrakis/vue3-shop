@@ -11,7 +11,12 @@
           placeholder="Search products..."
         />
 
-        <SelectField v-model="filtersStore.sortBy" multiselect :options="sortByOptions" />
+        <SelectField
+          v-model="filtersStore.sortBy"
+          multiselect
+          :options="sortByOptions"
+          @update:model-value="filtersStore.setCurrentPage(1)"
+        />
       </div>
     </div>
 
@@ -20,7 +25,11 @@
       <template v-else>
         <template v-if="filteredProducts.length">
           <div class="productsListContainer">
-            <ProductItem v-for="product in filteredProducts" :key="product.id" v-bind="product" />
+            <ProductItem
+              v-for="(product, index) in filteredProducts"
+              :key="`${product.id}_${index}`"
+              v-bind="product"
+            />
           </div>
         </template>
 
@@ -63,7 +72,6 @@ const productsNextPage = computed(() => productsStore.productsNextPage);
 const filtersStore = useFiltersStore();
 
 const currentPage = computed(() => filtersStore.currentPage);
-const sortFilter = computed(() => filtersStore.sortFilter);
 const filteringParams = computed(() => filtersStore.filteringParams);
 const searchText = computed(() => filtersStore.searchText);
 
@@ -110,18 +118,11 @@ watchEffect(async () => {
 watch(
   () => route.query,
   (newRoute, oldRoute) => {
+    if (newRoute.search !== oldRoute.search) return;
     productsStore.fetchProducts(filteringParams.value, newRoute.sort === oldRoute.sort);
   },
   { deep: true },
 );
-
-watch(searchText, () => {
-  filtersStore.setCurrentPage(1);
-});
-
-watch(sortFilter, () => {
-  filtersStore.setCurrentPage(1);
-});
 
 onMounted(() => {
   //set sortBy in store from route

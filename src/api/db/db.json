@@ -403,44 +403,34 @@
   ],
   "cart": [
     {
-      "id": "a033",
-      "productId": "6",
-      "name": "AirPods Pro",
-      "description": "Noise canceling.",
-      "image": "https://picsum.photos/200/300?random=6",
+      "id": "bb77",
+      "productId": "39",
+      "name": "4K Action Camera",
+      "description": "Waterproof camera.",
+      "image": "https://picsum.photos/200/300?random=39",
       "category": "electronics",
       "price": 250,
-      "quantity": 6
+      "quantity": 9
     },
     {
-      "id": "9cce",
-      "productId": "12",
-      "name": "Sport Hoodie",
-      "description": "Breathable fabric.",
-      "image": "https://picsum.photos/200/300?random=12",
+      "id": "64a7",
+      "productId": "21",
+      "name": "Cotton T-Shirt",
+      "description": "Comfortable fit.",
+      "image": "https://picsum.photos/200/300?random=21",
       "category": "clothing",
-      "price": 80,
-      "quantity": 1
+      "price": 25,
+      "quantity": 7
     },
     {
-      "id": "e256",
-      "productId": "41",
-      "name": "Yoga Pants",
-      "description": "Stretchy and comfortable.",
-      "image": "https://picsum.photos/200/300?random=41",
+      "id": "d06c",
+      "productId": "43",
+      "name": "Knit Beanie",
+      "description": "Warm hat.",
+      "image": "https://picsum.photos/200/300?random=43",
       "category": "clothing",
-      "price": 45,
-      "quantity": 3
-    },
-    {
-      "id": "77fd",
-      "productId": "28",
-      "name": "Wool Sweater",
-      "description": "Soft and warm.",
-      "image": "https://picsum.photos/200/300?random=28",
-      "category": "clothing",
-      "price": 90,
-      "quantity": 1
+      "price": 15,
+      "quantity": 4
     }
   ]
 }
