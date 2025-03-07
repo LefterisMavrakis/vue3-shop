@@ -14,7 +14,7 @@
                   v-bind="product"
                 />
               </template>
-              <template v-else> No product found in cart </template>
+              <template v-else> No products found in cart </template>
             </template>
             <template v-else>Loading cart products...</template>
           </div>

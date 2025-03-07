@@ -10,7 +10,9 @@ const useCartStore = defineStore('cart', () => {
   const addToCartLoading = ref(false);
   const deleteFromCartLoading = ref(false);
 
-  const cartItemsTotal = computed(() => cartData.value.reduce((acc, item) => acc + item.price, 0));
+  const cartItemsTotal = computed(() =>
+    cartData.value.reduce((acc, item) => acc + item.price * item.quantity, 0),
+  );
 
   const formattedTotal = computed(() => {
     return convertToEuroPrice(cartItemsTotal.value);
