@@ -15,14 +15,6 @@
     <div class="productQuantityActions flex justify-center gap-1">
       <div
         v-ripple
-        class="deleteAction mainButton outlined quantityAction"
-        @click="handleDeleteClick"
-      >
-        <IconTrash />
-      </div>
-
-      <div
-        v-ripple
         class="minusAction mainButton outlined quantityAction"
         @click="handleMinusClick"
       >
@@ -33,6 +25,14 @@
 
       <div v-ripple class="plusAction mainButton outlined quantityAction" @click="handlePlusClick">
         <IconPlus />
+      </div>
+
+      <div
+        v-ripple
+        class="deleteAction mainButton outlined quantityAction"
+        @click="handleDeleteClick"
+      >
+        <IconTrash />
       </div>
     </div>
   </div>

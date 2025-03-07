@@ -125,6 +125,8 @@ watch(
 );
 
 onMounted(() => {
+  filtersStore.setCurrentPage(1);
+
   //set sortBy in store from route
   if (route.query.sort) {
     const selectedSortOptions = String(route.query.sort)
@@ -134,12 +136,13 @@ onMounted(() => {
           label: option.charAt(0).toUpperCase() + option.slice(1),
           value: option,
         };
-      });
+      })
+      .filter((option, index) => sortByOptions[index].value === option.value);
 
     filtersStore.setSortBy(selectedSortOptions as SortByValue);
   }
 
-  //set searchtext in store from route
+  //set search text in store from route
   if (route.query.search) {
     filtersStore.setSearchText(String(route.query.search));
   }

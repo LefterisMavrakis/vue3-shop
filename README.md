@@ -106,7 +106,7 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
 
 #### 3.4 **Custom Shared Components**
 
-- Instead of relying on third-party libraries, custom **TextField** and **SelectField** components were created. These components are tailored to the specific needs of the project and ensure flexibility for future changes.
+- Instead of relying on third-party libraries, custom **TextField** and **SelectField** components were created. These components are tailored to the specific needs of the project and ensure flexibility for future changes and improvements.
 
 #### 3.5 **Sorted Options Filtering**
 

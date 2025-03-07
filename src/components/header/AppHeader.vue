@@ -1,7 +1,9 @@
 <template>
   <div class="appHeader flex justify-between gap-3">
     <div class="logoContainer textTitle xl">
-      <RouterLink to="/">Marketplace</RouterLink>
+      <RouterLink :to="{ name: 'home', query: $route.path === '/' ? $route.query : {} }"
+        >Marketplace</RouterLink
+      >
     </div>
     <div class="cartContainer">
       <MiniCart />

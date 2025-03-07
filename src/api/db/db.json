@@ -403,34 +403,34 @@
   ],
   "cart": [
     {
-      "id": "bb77",
-      "productId": "39",
-      "name": "4K Action Camera",
-      "description": "Waterproof camera.",
-      "image": "https://picsum.photos/200/300?random=39",
+      "id": "18b6",
+      "productId": "37",
+      "name": "Smart Doorbell",
+      "description": "Video doorbell.",
+      "image": "https://picsum.photos/200/300?random=37",
       "category": "electronics",
-      "price": 250,
-      "quantity": 9
+      "price": 180,
+      "quantity": 3
     },
     {
-      "id": "64a7",
-      "productId": "21",
-      "name": "Cotton T-Shirt",
-      "description": "Comfortable fit.",
-      "image": "https://picsum.photos/200/300?random=21",
+      "id": "f9aa",
+      "productId": "47",
+      "name": "Sports Bra",
+      "description": "Supportive and comfortable.",
+      "image": "https://picsum.photos/200/300?random=47",
       "category": "clothing",
-      "price": 25,
-      "quantity": 7
+      "price": 30,
+      "quantity": 3
     },
     {
-      "id": "d06c",
-      "productId": "43",
-      "name": "Knit Beanie",
-      "description": "Warm hat.",
-      "image": "https://picsum.photos/200/300?random=43",
+      "id": "0788",
+      "productId": "24",
+      "name": "Winter Coat",
+      "description": "Warm and cozy.",
+      "image": "https://picsum.photos/200/300?random=24",
       "category": "clothing",
-      "price": 15,
-      "quantity": 4
+      "price": 150,
+      "quantity": 2
     }
   ]
 }
