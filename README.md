@@ -10,16 +10,6 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
 
 ### 1. **Project Setup**
 
-- **Dependencies**:
-
-  - **Vue 3**: Core framework.
-  - **Vue Router**: To synchronize filters with query params.
-  - **TypeScript**: For static typing and enhanced development experience.
-  - **JSON Server**: Mock server to simulate API data.
-  - **Pinia**: State management for handling the shopping cart, products and filters.
-  - **Vitest**: Unit testing framework for testing components and logic.
-  - **CSS and SCSS**: For styling components.
-
 - **Installation Instructions**:
   1. Clone the repository:
      ```bash
@@ -42,6 +32,19 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
      ```bash
      npx vitest
      ```
+- **Prerequisites**:
+    - **node**: >=22.13.1
+    - **npm**: >=10.9.2
+
+- **Dependencies**:
+
+  - **Vue 3**: Core framework.
+  - **Vue Router**: To synchronize filters with query params.
+  - **TypeScript**: For static typing and enhanced development experience.
+  - **JSON Server**: Mock server to simulate API data.
+  - **Pinia**: State management for handling the shopping cart, products and filters.
+  - **Vitest**: Unit testing framework for testing components and logic.
+  - **CSS and SCSS**: For styling components.
 
 ---
 
