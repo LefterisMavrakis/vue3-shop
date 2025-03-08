@@ -14,7 +14,7 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
   1. Clone the repository:
      ```bash
      git clone https://github.com/LefterisMavrakis/vue3-shop.git
-     cd <project_directory>
+     cd vue3-shop
      ```
   2. Install dependencies:
      ```bash
