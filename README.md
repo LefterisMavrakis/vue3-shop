@@ -115,14 +115,13 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
 #### 3.6 **Search Functionality with Client-Side Filtering**
 
 - Users can search products either by **name** or **category** (clothing or electronics). The search operates on the client side, ensuring a fast and seamless experience.
-- **Category filtering** is implemented with checkboxes to allow users to filter by categories easily.
 
 ---
 
 ### 4. **Testing**
 
 - **Unit Tests**:
-  - **Vitest** was used to ensure components and stores work correctly and handle edge cases.
+  - **Vitest** was used to ensure components and stores work correctly.
 
 ---
 
