@@ -10,7 +10,12 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
 
 ### 1. **Project Setup**
 
+- **Prerequisites**:
+
+  - **node**: >=20
+
 - **Installation Instructions**:
+
   1. Clone the repository:
      ```bash
      git clone https://github.com/LefterisMavrakis/vue3-shop.git
@@ -32,9 +37,6 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
      ```bash
      npx vitest
      ```
-- **Prerequisites**:
-    - **node**: >=20
-    - **npm**: >=10.9.2
 
 - **Dependencies**:
 
