@@ -33,7 +33,7 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
      npx vitest
      ```
 - **Prerequisites**:
-    - **node**: >=22.13.1
+    - **node**: >=20
     - **npm**: >=10.9.2
 
 - **Dependencies**:
