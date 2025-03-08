@@ -37,17 +37,6 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
      ```bash
      npx vitest
      ```
-
-- **Dependencies**:
-
-  - **Vue 3**: Core framework.
-  - **Vue Router**: To synchronize filters with query params.
-  - **TypeScript**: For static typing and enhanced development experience.
-  - **JSON Server**: Mock server to simulate API data.
-  - **Pinia**: State management for handling the shopping cart, products and filters.
-  - **Vitest**: Unit testing framework for testing components and logic.
-  - **CSS and SCSS**: For styling components.
-
 ---
 
 ### 2. **Application Features**
@@ -123,14 +112,24 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
 
 ---
 
-### 4. **Testing**
+### 4. **Dependencies used**:
+
+  - **Vue 3**: Core framework.
+  - **Vue Router**: To synchronize filters with query params.
+  - **TypeScript**: For static typing and enhanced development experience.
+  - **JSON Server**: Mock server to simulate API data.
+  - **Pinia**: State management for handling the shopping cart, products and filters.
+  - **Vitest**: Unit testing framework for testing components and logic.
+  - **CSS and SCSS**: For styling components.
+
+### 5. **Testing**
 
 - **Unit Tests**:
   - **Vitest** was used to ensure components and stores work correctly.
 
 ---
 
-### 5. **Challenges and Solutions**
+### 6. **Challenges and Solutions**
 
 - **Challenge 1**: Implementing infinite loading with efficient data fetching.
 
@@ -142,7 +141,7 @@ This e-commerce application has been developed using **Vue 3** and **TypeScript*
 
 ---
 
-### 6. **Conclusion**
+### 7. **Conclusion**
 
 This application demonstrates proficiency in **TypeScript**, **Vue 3**, and modern front-end development practices. The implementation focuses on core e-commerce functionalities, with additional features such as pagination, sorting, search and cart management.
 
